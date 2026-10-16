@@ -63,8 +63,8 @@ node test/smoke.test.mjs     # 6 项契约测试
 
 ## 状态
 
-- ✅ `node --check`、`node test/smoke.test.mjs` 全部通过（提供方契约、技能名语法、正文一致性、`apply` 注册行为）。
-- ⏳ 尚未在真实 harness 里挂载跑通（待补一条端到端验证记录）。
+- ✅ `node --check index.js` 通过；`node test/smoke.test.mjs` 6/6 通过（提供方契约、技能名语法、正文一致性、`apply` 注册行为）。
+- ✅ **端到端挂载验证**（2026-10-16）：在一次性 profile 里 `dsh plugin --profile <tmp> add link:<本目录>` → `dsh --profile <tmp> --dump-config` 能看到 `- id: work-on-request` 被组合进 profile 树 → 起一次 headless 会话问它「技能列表里有没有 work-on-request」，模型回答 `YES work-on-request`。
 
 ## English (short)
 
