@@ -1,0 +1,13 @@
+# ============================================================================
+# dsh-work-on-request —— DSH bundle patch（插件自带的挂载声明）
+# ============================================================================
+# 这就是"标准 DSH 插件"的样子：包自己声明要往 profile 的配置树里插什么。
+# 装上之后，profile 只要在 `dsh.profile.bundles` 里列出本包名即生效：
+#
+#   dsh plugin --profile desktop add dsh-work-on-request
+#   （本地开发时：dsh plugin --profile desktop add link:<本目录>）
+# ============================================================================
+
+- insert:
+    - id: work-on-request
+      name: dsh-work-on-request
