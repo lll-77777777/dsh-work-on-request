@@ -2,6 +2,8 @@
 
 > **提问就答，叫了才做。**
 
+[![GitHub](https://img.shields.io/badge/GitHub-lll--77777777%2Fdsh--work--on--request-181717?logo=github)](https://github.com/lll-77777777/dsh-work-on-request)
+
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 插件：**默认只回答问题，只有你明确让它干活时才动手。**
 
 ## 它解决的问题
@@ -33,10 +35,16 @@ function apply(ctx) {
 ## 安装
 
 ```bash
-# 从 npm（发布后）
+# ① 直接从 GitHub 装（推荐，不用等 npm 发布）
+dsh plugin --profile desktop add github:lll-77777777/dsh-work-on-request
+
+# 固定到某个 tag（更稳，不会被后续提交影响）
+dsh plugin --profile desktop add github:lll-77777777/dsh-work-on-request#v0.1.0
+
+# ② 从 npm（发布后）
 dsh plugin --profile desktop add dsh-work-on-request
 
-# 本地开发（link 到本目录）
+# ③ 本地开发（link 到本目录）
 dsh plugin --profile desktop add link:/path/to/dsh-work-on-request
 ```
 
